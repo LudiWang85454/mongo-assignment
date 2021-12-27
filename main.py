@@ -46,7 +46,7 @@ client = pymongo.MongoClient("mongodb://localhost:27017/")      # Assumes defaul
 db = client["mongo-assignment"] # Assumes random database name, none specified in instructions
 collection = db["mongo-assignment"]     # Assumes random collection name, none specified in instructions
 
-requests = [InsertOne(
+requests = [pymongo.InsertOne(
         {
                 "team_number": i.team_number,
                 "average_balls_scored": i.average_balls_scored,
