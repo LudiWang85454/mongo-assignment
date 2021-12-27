@@ -55,5 +55,5 @@ requests = [pymongo.InsertOne(
                 "matches_played": i.n_matches,
                 "percent_climb_success": i.average_climb_success
         }
-) for i in teams]
+) for i in teams.values()]
 collection.bulk_write(requests)
