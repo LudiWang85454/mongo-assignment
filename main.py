@@ -40,7 +40,7 @@ for entry in json.load(open("example_tim_data.json")):
         if entry["team_num"] in teams:
                 teams[entry["team_num"]].update(entry["num_balls"], entry["climbed"])
         else:
-                teams[entry["team_num"]] = Team(entry["team_num"])
+                teams[entry["team_num"]] = Team(entry["team_num"], entry["num_balls"], entry["climbed"])
 
 client = pymongo.MongoClient("mongodb://localhost:27017/")      # Assumes default MongoDB, not specified in instructions
 db = client["mongo-assignment"] # Assumes random database name, none specified in instructions
