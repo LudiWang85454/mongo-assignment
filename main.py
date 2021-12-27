@@ -36,7 +36,7 @@ class Team:
         
 teams = {}
 
-for entry in json.load("example_tim_data.json"):
+for entry in json.load(open("example_tim_data.json")):
         if entry["team_num"] in teams:
                 teams[entry["team_num"]].update(entry["num_balls"], entry["climbed"])
         else:
